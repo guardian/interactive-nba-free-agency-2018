@@ -2,13 +2,16 @@
    
 <!--TABLE 1: PLAYER TRACKER-->
 
-	<h2>NBA Free Agency Player Tracker</h2>
+	<h2>Player Tracker</h2>
+
+
+	<input type="search" id="search-input" placeholder="Search player"></input>
 
 <br>
 
 		<div id="table-one" class='nba-table'>
  			<div class='trackerHeader tableHeadings'>
-				<div class='trackerColumn numbers'>Free Agent Rank</div>
+				<div class='trackerColumn'>Free Agent Rank</div>
 				<div class='trackerColumn'>Player</div>
 				<div class='trackerColumn'>Contract</div>
 				<div class='trackerColumn'>Old Team</div>
@@ -19,8 +22,8 @@
 		
 			{{#sheet1}}
 
-			<div class='trackerRow'>
-				<div class='trackerColumn numbers'>{{FA_Rank}}</div>
+			<div class='trackerRow' data-search="{{Player}}">
+				<div class='trackerColumn'>{{FA_Rank}}</div>
 				<div class='trackerColumn'>{{Player}}</div>
 				<div class='trackerColumn'>{{Contract_Status}}</div>
 		    	<div class='trackerColumn'>{{Old_Team}}</div>
@@ -42,7 +45,7 @@
 
 <!--TABLE 2: TEAM TRACKER-->
 
-  	<h2>NBA Free Agency Team Salary Tracker</h2>
+  	<h2>Team Tracker</h2>
 
 <br>
 
@@ -53,7 +56,7 @@
 				<div class='trackerColumn numbers'>Free Agents</div>
 				<div class='trackerColumn numbers'>Active Salary</div>
 				<div class='trackerColumn numbers'>Cap Room</div>
-				<div class='trackerColumn numbers'>News</div>
+				<div class='trackerColumn'>News</div>
 			</div>
 
 		{{#sheet2}}
@@ -64,7 +67,7 @@
 		    	<div class='trackerColumn numbers'>{{Free_Agents}}</div>
 		    	<div class='trackerColumn numbers'>{{Active_Salary}}</div>
 		    	<div class='trackerColumn numbers'>{{Cap_Room}}</div>
-		    	<div class='trackerColumn numbers'>{{News}}</div>
+		    	<div class='trackerColumn'>{{News}}</div>
 			</div>
 
 			{{/sheet2}}

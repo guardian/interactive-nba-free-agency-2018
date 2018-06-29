@@ -16,3 +16,23 @@ buttonTwo.addEventListener('click', function(){
 
 console.log(button)
 console.log(buttonTwo)
+
+const allRows = Array.prototype.slice.call(document.querySelectorAll(".trackerRow"));
+
+const searchBox = document.querySelector("#search-input");
+
+searchBox.addEventListener("keyup", (e) => {
+    const searchBoxTerm = searchBox.value;
+    
+    if(searchBoxTerm.length < 3 && searchBoxTerm !== "") {
+        return;
+    }
+
+    allRows.forEach(el => {
+        if(el.getAttribute("data-search").toLowerCase().indexOf(searchBoxTerm.toLowerCase()) > -1) {
+            el.style.display = "";
+        } else {
+            el.style.display = "none";
+        }
+    });
+});
