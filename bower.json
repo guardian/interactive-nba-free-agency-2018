@@ -1,0 +1,20 @@
+{
+  "name": "Daniel",
+  "description": "Journalist",
+  "main": "src/render.js",
+  "authors": [
+    "Me"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "nba"
+  ],
+  "homepage": "https://github.com/guardian/interactive-nba-free-agency-2018",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

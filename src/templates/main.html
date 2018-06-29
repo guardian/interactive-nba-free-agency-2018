@@ -1,63 +1,80 @@
 <div class="interactive-wrapper">
    
- <h2>NBA Free Agency Player Tracker</h2>
-	<div id="table-one" class='nba-table'>
- 		<div class='trackerHeader tableHeadings'>
-					<div class='trackerColumn'>Player</div>
-					<div class='trackerColumn'>Free Agency Rank</div>
-					<div class='trackerColumn'>Old Team</div>
-					<div class='trackerColumn'>Age</div>
-					<div class='trackerColumn'>Contract Status</div>
-					<div class='trackerColumn'>Latest</div>
-					<div class='trackerColumn'>New Team</div>
-		</div>
+<!--TABLE 1: PLAYER TRACKER-->
+
+	<h2>NBA Free Agency Player Tracker</h2>
+
+<br>
+
+		<div id="table-one" class='nba-table'>
+ 			<div class='trackerHeader tableHeadings'>
+				<div class='trackerColumn numbers'>Free Agent Rank</div>
+				<div class='trackerColumn'>Player</div>
+				<div class='trackerColumn'>Contract</div>
+				<div class='trackerColumn'>Old Team</div>
+				<div class='trackerColumn numbers'>Age</div>
+				<div class='trackerColumn'>Latest</div>
+				<div class='trackerColumn'>New Team</div>
+			</div>
 		
-		{{#sheet1}}
+			{{#sheet1}}
 
 			<div class='trackerRow'>
+				<div class='trackerColumn numbers'>{{FA_Rank}}</div>
 				<div class='trackerColumn'>{{Player}}</div>
-		    	<div class='trackerColumn numbers'>{{FA_Rank}}</div>
+				<div class='trackerColumn'>{{Contract_Status}}</div>
 		    	<div class='trackerColumn'>{{Old_Team}}</div>
 		    	<div class='trackerColumn numbers'>{{Age}}</div>
-		    	<div class='trackerColumn'>{{Contract_Status}}</div>
 		    	<div class='trackerColumn'>{{{News}}}</div>
 		    	<div class='trackerColumn'>{{New_Team}}</div>
 			</div>
 
-		{{/sheet1}}
+			{{/sheet1}}
 
-</div>
+		</div>
 
-<div class="guardian-button" id="table-one-button">
-Show all
-</div>
+			<div class="guardian-button" id="table-one-button">
+			Show all
+			</div>
+
+<br>
+<br>
+
+<!--TABLE 2: TEAM TRACKER-->
+
+  	<h2>NBA Free Agency Team Salary Tracker</h2>
 
 <br>
 
-  <h2>NBA Free Agency Team Salary Tracker</h2>
-  	<div class='nba-table'>
-	<div class='trackerHeader'>
-		<div class='trackerRow tableHeadings'>
+  		<div id="table-two" class='nba-table'>
+			<div class='trackerHeader tableHeadings'>
 				<div class='trackerColumn'>Team</div>
-				<div class='trackerColumn'>Players Signed</div>
-				<div class='trackerColumn'>Free Agents</div>
-				<div class='trackerColumn'>Active Salary</div>
-				<div class='trackerColumn'>Cap Room</div>
-		</div>
-	
-
-		{{#sheet2}}
-			<div class='trackerRow'>
-				<div class='trackerColumn'>{{Team}}</div>
-		    	<div class='trackerColumn'>{{Players_Signed}}</div>
-		    	<div class='trackerColumn'>{{Free_Agents}}</div>
-		    	<div class='trackerColumn'>{{Active_Salary}}</div>
-		    	<div class='trackerColumn'>{{Cap_Room}}</div>
+				<div class='trackerColumn numbers'>Players Signed</div>
+				<div class='trackerColumn numbers'>Free Agents</div>
+				<div class='trackerColumn numbers'>Active Salary</div>
+				<div class='trackerColumn numbers'>Cap Room</div>
+				<div class='trackerColumn numbers'>News</div>
 			</div>
 
-		{{/sheet2}}
-	</div>	
-	</div>
+		{{#sheet2}}
+
+			<div class='trackerRow'>
+				<div class='trackerColumn'>{{Team}}</div>
+		    	<div class='trackerColumn numbers'>{{Players_Signed}}</div>
+		    	<div class='trackerColumn numbers'>{{Free_Agents}}</div>
+		    	<div class='trackerColumn numbers'>{{Active_Salary}}</div>
+		    	<div class='trackerColumn numbers'>{{Cap_Room}}</div>
+		    	<div class='trackerColumn numbers'>{{News}}</div>
+			</div>
+
+			{{/sheet2}}
+
+		</div>	
+
+
+			<div class="guardian-button" id="table-two-button">
+					Show all
+					</div>
 </div>
 
 
