@@ -23,6 +23,14 @@ h2 {
     
 }
 
+.rank {
+	display: table-cell;
+	width: 5%;
+	border-width: 1px;
+	padding-bottom: 10px;
+	padding-top: 3px;
+}
+
 .trackerHeader {
 	display: table-row;
 	font-weight: bold;
@@ -113,6 +121,8 @@ h2 {
 
 #search-input {
     display: block;
+    -webkit-appearance: none;
+	-webkit-border-radius:0px;
     margin-top: 12px;
     margin-bottom: 24px;
     width: 100%;

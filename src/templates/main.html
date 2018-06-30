@@ -11,24 +11,24 @@
 
 		<div id="table-one" class='nba-table'>
  			<div class='trackerHeader tableHeadings'>
-				<div class='trackerColumn'>Free Agent Rank</div>
+				<div class='rank'>Rank</div>
 				<div class='trackerColumn'>Player</div>
 				<div class='trackerColumn'>Contract</div>
 				<div class='trackerColumn'>Old Team</div>
 				<div class='trackerColumn numbers'>Age</div>
-				<div class='trackerColumn'>Latest</div>
+				<div class='trackerColumn'>Latest News</div>
 				<div class='trackerColumn'>New Team</div>
 			</div>
 		
 			{{#sheet1}}
 
 			<div class='trackerRow' data-search="{{Player}}">
-				<div class='trackerColumn'>{{FA_Rank}}</div>
+				<div class='trackerColumn'>{{Rank}}</div>
 				<div class='trackerColumn'>{{Player}}</div>
 				<div class='trackerColumn'>{{Contract_Status}}</div>
 		    	<div class='trackerColumn'>{{Old_Team}}</div>
 		    	<div class='trackerColumn numbers'>{{Age}}</div>
-		    	<div class='trackerColumn'>{{{News}}}</div>
+		    	<div class='trackerColumn'>{{{Latest_News}}}</div>
 		    	<div class='trackerColumn'>{{New_Team}}</div>
 			</div>
 
@@ -54,8 +54,8 @@
 				<div class='trackerColumn'>Team</div>
 				<div class='trackerColumn numbers'>Players Signed</div>
 				<div class='trackerColumn numbers'>Free Agents</div>
-				<div class='trackerColumn numbers'>Active Salary</div>
-				<div class='trackerColumn numbers'>Cap Room</div>
+				<div class='trackerColumn'>Active Salary</div>
+				<div class='trackerColumn'>Cap Room</div>
 				<div class='trackerColumn'>News</div>
 			</div>
 
@@ -67,7 +67,7 @@
 		    	<div class='trackerColumn numbers'>{{Free_Agents}}</div>
 		    	<div class='trackerColumn numbers'>{{Active_Salary}}</div>
 		    	<div class='trackerColumn numbers'>{{Cap_Room}}</div>
-		    	<div class='trackerColumn'>{{News}}</div>
+		    	<div class='trackerColumn'>{{{News}}}</div>
 			</div>
 
 			{{/sheet2}}
